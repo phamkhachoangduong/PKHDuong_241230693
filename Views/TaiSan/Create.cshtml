@@ -1,0 +1,12 @@
+﻿@model PKHDuong_241230693.Models.TaiSan
+<div style="background:#fff;max-width:550px;margin:20px auto;padding:20px;border-radius:8px">
+    <h3 style="color:#1d3f72;margin-bottom:15px">THÊM TÀI SẢN MỚI</h3>
+    <form asp-action="Create" method="post">
+        <p>Loại tài sản<br /><select asp-for="MaLoai" asp-items="ViewBag.MaLoai"></select></p>
+        <p>Tên tài sản<br /><input asp-for="TenTS" /><br /><span asp-validation-for="TenTS" style="color:red"></span></p>
+        <p>Nguyên giá (triệu)<br /><input asp-for="NguyenGia" /><br /><span asp-validation-for="NguyenGia" style="color:red"></span></p>
+        <p>Tên file ảnh<br /><input asp-for="Anh" /><br /><span asp-validation-for="Anh" style="color:red"></span></p>
+        <button type="submit" class="btn-buy">Create</button>
+    </form>
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

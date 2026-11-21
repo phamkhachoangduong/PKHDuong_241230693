@@ -1,0 +1,11 @@
+﻿@model IEnumerable<PKHDuong_241230693.Models.LoaiTaiSan>
+<ul class="menu">
+    <li class="active"><a href="/">Pham Khac Hoang Duong</a></li>
+    @foreach (var i in Model)
+    {
+        <li><a href="#" class="pkhd-loai" data-maloai="@i.MaLoai">@i.TenLoai</a></li>
+    }
+
+
+
+</ul>

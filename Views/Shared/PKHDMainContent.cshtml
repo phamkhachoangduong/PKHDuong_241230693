@@ -1,0 +1,15 @@
+﻿ @model IEnumerable<PKHDuong_241230693.Models.TaiSan>
+ <div class="section-head">
+     <h3>@ViewBag.TieuDe</h3>
+     <a href="/TaiSan/Create">+Them tai san</a>
+ </div>
+ <div class="grid">
+    @foreach (var t in Model)
+    {
+        <div class="asset-card">
+            <img src="/images/@t.Anh" alt=""/>
+            <h2>@t.TenTS</h2>
+            <div class="asset-foot"><span class="price">@t.NguyenGia tr</span><button class="btn-buy">chi tiet</button></div>
+        </div>
+    }
+</div>
